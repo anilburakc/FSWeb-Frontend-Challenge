@@ -25,8 +25,11 @@ function App() {
             <Skills />
             <Profile />
             <Projects />
-            <Contact />
           </main>
+
+          <footer>
+            <Contact />
+          </footer>
         </div>
       </LanguageProvider>
     </ThemeProvider>

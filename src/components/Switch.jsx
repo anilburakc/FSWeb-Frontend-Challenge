@@ -8,7 +8,7 @@ const Switch = () => {
   const t = content[language];
 
   return (
-    <div className="flex items-center justify-end space-x-4 py-4 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-end space-x-4 py-4 max-w-7xl mx-auto w-full">
       <div className="flex items-center space-x-4">
         <button
           onClick={toggleTheme}
@@ -42,21 +42,12 @@ const Switch = () => {
       {/* Separator */}
       <span className="text-gray-400">|</span>
 
+      {/* Language Switch */}
       <button
         onClick={toggleLanguage}
-        className="w-[120px] text-[15px] font-medium text-center whitespace-nowrap"
+        className="w-[120px] text-[15px] font-medium text-gray-600 dark:text-gray-400 text-center whitespace-nowrap"
       >
-        {language === 'en' ? (
-          <>
-            <span className="text-[#4731D3] dark:text-[#BAB2E7]">TÜRKÇE</span>
-            <span className="text-[#777777]">'YE GEÇ</span>
-          </>
-        ) : (
-          <>
-            <span className="text-[#777777]">SWITCH TO</span>{' '}
-            <span className="text-[#4731D3] dark:text-[#BAB2E7]">ENGLISH</span>
-          </>
-        )}
+        {t.nav.language}
       </button>
     </div>
   );
