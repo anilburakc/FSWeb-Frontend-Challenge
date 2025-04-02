@@ -1,29 +1,103 @@
+import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { content } from '../data/content';
 
-import denemeResmi from '../assets/deneme-resmi.png';
+const Header = () => {
+  const { language } = useLanguage();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = content[language];
 
-export default function Header(){
-    return(
-        <div className="relative w-full h-64" >
-            <div className="absolute inset-0  w-3/4 bg-blue-500"></div>
-            <div className="absolute inset-0 left-3/4 w-1/4 bg-green-500"></div>
-            <header>
-                <nav className="relative z-10 flex left-196 top-2">
-                    <button className=" text-red-600 text-xl border-2 border-red-600 rounded-md bg-white">Turkceye gec</button>
-                    <button className="ml-3 pl-10 text-red-600 text-xl border-2 border-red-600 rounded-md bg-white">Dark Mode</button>
-                </nav>
-                
-                <h4 className="relative z-10 flex left-10 top-10 text-red-600 text-xl ">isim soyisim</h4>
-            </header>
-            <main >
-                <h1 className="relative z-10 flex left-10 top-12 text-black-600 text-4xl font-bold">ben frontend developer</h1>
-                <p className="relative z-10 flex left-10 top-15 text-black-600 text-sm font-bold">kendim geliştirmeye çalışıyorum</p>
-                <img src={denemeResmi} alt="deneme-resmi" className="relative z-10 flex left-190 bottom-20 top-15 w-1/4 h-1/4" />
-                <nav className="relative z-10 flex left-10 top-20">
-                    <a className=" py-2 px-1 top-20 text-yellow-600 text-m font-bold rounded-md bg-white">github</a>
-                    <a className="ml-5 pl-5 py-2 top-20 text-yellow-500 text-m font-bold rounded-md bg-white">linkedin</a>
-                </nav>
-                
-            </main>
+  const navItems = [
+    { id: 'skills', label: t.nav.skills },
+    { id: 'projects', label: t.nav.projects },
+  ];
+
+  return (
+    <header className="bg-white dark:bg-[#252128]">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <div className="w-[64px] h-[62px] rounded-full bg-[#7B61FF] dark:bg-[#8F88FF] border border-[#EEEBFF] dark:border-[#4731D3] flex items-center justify-center">
+              <span className="text-white font-bold text-[24px] transform rotate-[30deg]">AB</span>
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-20">
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="text-[18px] text-[#6B7280] dark:text-[#6B7280] hover:text-[#3730A3] dark:hover:text-[#3730A3] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              className="px-4 py-2 text-[#3730A3] dark:text-[#3730A3] border border-[#3730A3] dark:border-[#3730A3] rounded-[6px] dark:bg-white hover:bg-[#3730A3] dark:hover:bg-[#3730A3] hover:text-white dark:hover:text-white transition-colors text-[18px]"
+            >
+              {t.nav.hire}
+            </a>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
         </div>
-    )
-}
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <nav className="md:hidden py-4 space-y-4">
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="block text-[18px] text-[#6B7280] dark:text-[#6B7280] hover:text-[#3730A3] dark:hover:text-[#3730A3] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              className="block px-4 py-2 text-[#3730A3] dark:text-[#3730A3] border border-[#3730A3] dark:border-[#3730A3] rounded-[6px] dark:bg-white hover:bg-[#3730A3] dark:hover:bg-[#3730A3] hover:text-white dark:hover:text-white transition-colors text-center text-[18px]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t.nav.hire}
+            </a>
+          </nav>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header; 

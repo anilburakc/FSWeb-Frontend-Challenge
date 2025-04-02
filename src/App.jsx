@@ -1,20 +1,36 @@
-import './App.css'
-import Header from './components/Header'
-import Skills from './components/Skills'
-import Profile from './components/Profile'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
+import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider } from './context/LanguageContext';
+import Header from './components/Header';
+import Switch from './components/Switch';
+import Hero from './components/Hero';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Profile from './components/Profile';
 
 function App() {
   return (
-    <>
-    <Header/>
-    <Skills/>
-    <Profile/>
-    <Projects/>
-    <Footer/>
-    </>
-  )
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className="min-h-screen bg-white dark:bg-[#252128]">
+          {/* Navigation Elements */}
+          <div className="max-w-7xl mx-auto w-full">
+            <Switch />
+            <Header />
+          </div>
+
+          {/* Main Content */}
+          <main className="pt-8 max-w-7xl mx-auto w-full">
+            <Hero />
+            <Skills />
+            <Profile />
+            <Projects />
+            <Contact />
+          </main>
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
