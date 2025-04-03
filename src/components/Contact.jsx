@@ -1,24 +1,30 @@
 import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../data/content';
-
+import { FaHandPointRight } from 'react-icons/fa';
 const Contact = () => {
   const { language } = useLanguage();
   const t = content[language];
 
   return (
-    <section id="contact" className="py-20 bg-[#F9F9F9] dark:bg-[#141414]">
+    <section id="contact" className="py-20 bg-light-surface dark:bg-dark-bg">
+      {/* İçerik container - Maksimum genişlik ve otomatik kenar boşlukları */}
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-[42px] text-[#1F2937] dark:text-[#AEBCCF] mb-12 max-w-[540px] text-left">
+        {/* İletişim başlığı */}
+        <h2 className="text-[42px] text-light-text dark:text-dark-text mb-12 max-w-[540px] text-left">
           {t.contact.title}
         </h2>
+        {/* İletişim bilgileri ve sosyal medya linkleri */}
         <div className="flex flex-wrap justify-between items-center gap-8">
+          {/* E-posta linki */}
           <a
             href={`mailto:${t.contact.email}`}
-            className="text-[18px] text-[#AF0C48] dark:text-[#BAB2E7]"
+            className="text-[18px] text-[#AF0C48] dark:text-secondary"
           >
-            {t.contact.email}
+            <FaHandPointRight className="text-xl inline-block mr-2 text-[#FFE86E] dark:text-[#FFE86E] dark:bg-dark-bg shadow-lg shadow-gray-950 bg-light-surface" /> {t.contact.email}
           </a>
+          {/* Sosyal medya linkleri */}
           <div className="flex gap-8">
+            {/* GitHub linki */}
             <a
               href="https://github.com/anilburakc"
               target="_blank"
@@ -27,6 +33,7 @@ const Contact = () => {
             >
               {t.contact.links.github}
             </a>
+            {/* LinkedIn linki */}
             <a
               href="https://www.linkedin.com/in/anilburakcavdir/"
               target="_blank"

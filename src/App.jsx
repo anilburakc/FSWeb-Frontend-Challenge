@@ -26,7 +26,7 @@ function App() {
             <Profile />
             <Projects />
           </main>
-
+          {/* Footer */}  
           <footer>
             <Contact />
           </footer>

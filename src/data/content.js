@@ -9,8 +9,8 @@ export const content = {
       language: 'TÜRKÇE\'YE GEÇ'
     },
     hero: {
-      title: 'Creative thinker\nMinimalism lover',
-      description: 'Hi, I\'m Almila. I\'m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let\'s shake hands with me.'
+      title: 'Loves coding\n Open to improvement ',
+      description: 'Hello, I\'m Anıl Burak. I\’m a developer who is interested in the world of software and always trying to improve in the full-stack field. While coding, I focus on learning, trying new things, and discovering better ways to build. On the frontend, I use technologies like React, Tailwind CSS, and JavaScript to create simple, functional, and user-friendly interfaces. On the backend, I\’m working with Java, Spring Boot, and PostgreSQL to improve my skills. My goal is to become a well-rounded full-stack developer and contribute to meaningful projects.'
     },
     skills: {
       title: 'Skills',
@@ -34,17 +34,17 @@ export const content = {
         'Birth Date': '20.04.1999',
         'Location City': 'Muğla',
         'Education Status': 'İzmir Demokrasi Univ. Nutrition & Dietetics\nBSc, 2023',
-        'Preferred Role': 'Frontend, UI, Backend'
+        'Preferred Role': 'Frontend, Backend'
       },
       about: 'About Me',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\nMinima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!'
+      description: 'Even though I studied in a different field, software development has been on my mind for years. My interest and curiosity about technology eventually led me to this area. When I write code, the focus and satisfaction I feel show me that I’m on the right path, and I decided to build a new career in this field.\n My goal is not only to be technically skilled, but also to be a developer who thinks in a solution-oriented way, cares about user experience, and is always open to learning.'
     },
     projects: {
       title: 'Projects',
       project: {
-        title: 'Workintech',
-        description: 'A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.',
-        tech: ['React', 'Redux', 'Axios'],
+        title: 'Pizza Order System',
+        description: 'It is a web page that allows the user to choose a pizza and customize the order. This project is open for improvement and will be updated soon.',
+        tech: ['React', 'CSS', 'Axios', 'Cypress.io'],
         links: {
           github: 'https://github.com/anilburakc/fsweb-s8-challenge-pizza',
           live: 'https://fsweb-s8-challenge-pizza-psi.vercel.app/'
@@ -70,8 +70,8 @@ export const content = {
       language: 'SWITCH TO ENGLISH'
     },
     hero: {
-      title: 'Yaratıcı düşünür\nMinimalizm sever',
-      description: 'Merhaba, ben Almila. Full-stack geliştiriciyim. Eğer harika kullanıcı deneyimleriyle sağlam ve ölçeklenebilir frontend ürünleri oluşturacak bir geliştirici arıyorsanız, hadi tanışalım.'
+      title: 'Kodlamayı seven\n Gelişmeye açık',
+      description: 'Merhaba, ben Anıl Burak. Full-stack alanında kendini sürekli geliştirmeye çalışan, yazılım dünyasına ilgi duyan bir geliştiriciyim. Kod yazarken öğrenmeye, denemeye ve yeni şeyler keşfetneye önem veriyorum. Frontend alanında React, Tailwind CSS, JavaScript gibi teknolojilerle sade, işlevsel ve kullanıcı dostu arayüzler oluşturuyorum. Backend tarafında da kendimi geliştirmek için Java, Spring Boot ve PostgreSQL üzerinde çalışıyorum. Amacım, donanımlı bir full-stack geliştirici olarak projelere katkı sunmak.'
     },
     skills: {
       title: 'Yetenekler',
@@ -95,17 +95,17 @@ export const content = {
         'Doğum Tarihi': '20.04.1999',
         'İkamet Şehri': 'Muğla',
         'Eğitim Durumu': 'İzmir Demokrasi Üniv. Beslenme ve Diyetetik \nLisans, 2023',
-        'Tercih Ettiği Rol': 'Frontend, UI, Backend'
+        'Tercih Ettiği Rol': 'Frontend, Backend'
       },
       about: 'Hakkımda',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\nMinima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!'
+      description: 'Farklı bir alanda eğitim almış olsam da, yazılım geliştirme yıllardır aklımın bir köşesindeydi. Bu ilgi ve teknolojiye duyduğum merak, sonunda beni bu alana yönlendirdi. Kod yazarken yaşadığım odaklanma ve hissettiğim tatmin duygusu, doğru yolda olduğumu gösterdi ve bu alanda kendime yeni bir kariyer inşa etmeye karar verdim.\n Hedefim; yalnızca teknik anlamda yetkin olmak değil, aynı zamanda çözüm odaklı düşünen, kullanıcı deneyimine önem veren ve sürekli öğrenmeye açık bir yazılım geliştiricisi olmak.'
     },
     projects: {
       title: 'Projeler',
       project: {
-        title: 'Workintech',
-        description: 'A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.',
-        tech: ['React', 'Redux', 'Axios'],
+        title: 'Pizza Şipariş Sistemi',
+        description: 'Kullanıcının pizza seçmesine ve siparişini özelleştirmesine olanak tanıyan bir web sayfasıdır. Bu proje geliştirmeye açık olup yakın zamanda güncellenecektir.',
+        tech: ['React', 'CSS', 'Axios', 'Cypress.io'],
         links: {
           github: 'https://github.com/anilburakc/fsweb-s8-challenge-pizza',
           live: 'https://fsweb-s8-challenge-pizza-psi.vercel.app/'

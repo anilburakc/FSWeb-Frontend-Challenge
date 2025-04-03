@@ -8,46 +8,56 @@ const Switch = () => {
   const t = content[language];
 
   return (
-    <div className="flex items-center justify-end space-x-4 py-4 max-w-7xl mx-auto w-full">
-      <div className="flex items-center space-x-4">
+    <div className="flex items-center justify-end space-x-2 sm:space-x-4 py-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <div className="flex items-center space-x-2 sm:space-x-4">
         <button
           onClick={toggleTheme}
-          className="relative inline-flex h-6 w-11 items-center rounded-full bg-[#4731D3] dark:bg-[#3A3A3A] transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#4731D3] focus:ring-offset-2"
+          className="relative inline-flex h-5 w-10 sm:h-6 sm:w-11 items-center rounded-full bg-primary dark:bg-dark-border transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
         >
           <span
             className={`${
-              isDarkMode ? 'translate-x-1' : 'translate-x-6'
-            } relative inline-block h-4 w-4 transform transition-all duration-500 ease-in-out`}
+              isDarkMode ? 'translate-x-1' : 'translate-x-5 sm:translate-x-6'
+            } relative inline-block h-3 w-3 sm:h-4 sm:w-4 transform transition-all duration-500 ease-in-out`}
           >
             {isDarkMode ? (
               // Dark mode - Crescent moon
               <div className="relative h-full w-full">
-                <div className="absolute h-4 w-4 rounded-full bg-[#FFE86E]" />
-                <div className="absolute h-4 w-4 rounded-full bg-[#3A3A3A] translate-x-1" />
+                <div className="absolute h-3 w-3 sm:h-4 sm:w-4 rounded-full bg-[#FFE86E]" />
+                <div className="absolute h-3 w-3 sm:h-4 sm:w-4 rounded-full bg-dark-border translate-x-1" />
               </div>
             ) : (
               // Light mode - Full circle
-              <div className="h-4 w-4 rounded-full bg-[#FFE86E]" />
+              <div className="h-3 w-3 sm:h-4 sm:w-4 rounded-full bg-[#FFE86E]" />
             )}
           </span>
         </button>
         <button
           onClick={toggleTheme}
-          className="w-[120px] text-[15px] font-medium text-gray-600 dark:text-gray-400 text-center whitespace-nowrap"
+          className="w-[100px] sm:w-[120px] text-xs sm:text-[15px] font-medium text-light-text dark:text-dark-text text-center whitespace-nowrap"
         >
           {isDarkMode ? t.nav.lightMode : t.nav.darkMode}
         </button>
       </div>
 
       {/* Separator */}
-      <span className="text-gray-400">|</span>
+      <span className="text-dark-text">|</span>
 
       {/* Language Switch */}
       <button
         onClick={toggleLanguage}
-        className="w-[120px] text-[15px] font-medium text-gray-600 dark:text-gray-400 text-center whitespace-nowrap"
+        className="w-[100px] sm:w-[120px] text-xs sm:text-[15px] font-medium text-light-text dark:text-dark-text text-center whitespace-nowrap"
       >
-        {language === 'en' ?<><span className='text-[#4731D3]'>TÜRKÇE</span><span>'YE GEÇ</span></> : <><span>SWITCH TO </span><span className='text-[#4731D3]'>ENGLISH</span></>}
+        {language === 'en' ? (
+          <>
+            <span className="text-primary">TÜRKÇE</span>
+            <span className="hidden sm:inline">'YE GEÇ</span>
+          </>
+        ) : (
+          <>
+            <span className="hidden sm:inline">SWITCH TO </span>
+            <span className="text-primary">ENGLISH</span>
+          </>
+        )}
       </button>
     </div>
   );

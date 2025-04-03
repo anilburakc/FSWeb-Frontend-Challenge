@@ -22,17 +22,23 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20">
+      {/* İçerik container - Maksimum genişlik ve otomatik kenar boşlukları */}
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl leading-none font-semibold text-[#1F2937] dark:text-[#AEBCCF] mb-12 text-left">
+        {/* Başlık - Skills */}
+        <h2 className="text-5xl leading-none font-semibold text-light-text dark:text-dark-text mb-12 text-left">
           {t.skills.title}
         </h2>
+        {/* Skills grid yapısı - 3 sütunlu */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[120px]">
+          {/* Her bir skill kartı */}
           {skills.map((skill) => (
             <div key={skill.title}>
-              <h3 className="text-[30px] text-[#4338CA] dark:text-[#B7AAFF] mb-4">
+              {/* Skill başlığı */}
+              <h3 className="text-[30px] text-primary dark:text-secondary mb-4">
                 {skill.title}
               </h3>
-              <p className="text-[12px] text-[#6B7280] dark:text-white">
+              {/* Skill açıklaması */}
+              <p className="text-[12px] text-light-text dark:text-light-bg">
                 {skill.description}
               </p>
             </div>

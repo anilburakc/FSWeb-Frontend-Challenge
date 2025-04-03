@@ -13,41 +13,47 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white dark:bg-[#252128]">
+    <header className="bg-light-bg dark:bg-dark-bg">
+      {/* İçerik container - Maksimum genişlik ve otomatik kenar boşlukları */}
       <div className="max-w-7xl mx-auto w-full">
+        {/* Header içerik wrapper - Flex yapısı ve yükseklik */}
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo bölümü - Sol taraf */}
           <div className="flex items-center">
-            <div className="w-[64px] h-[62px] rounded-full bg-[#7B61FF] dark:bg-[#8F88FF] border border-[#EEEBFF] dark:border-[#4731D3] flex items-center justify-center">
+            {/* Logo container - Yuvarlak arka plan ve kenarlık */}
+            <div className="w-[64px] h-[62px] rounded-full bg-primary dark:bg-secondary border border-secondary dark:border-primary flex items-center justify-center">
+              {/* Logo metni - 30 derece döndürülmüş */}
               <span className="text-white font-bold text-[24px] transform rotate-[30deg]">AB</span>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Masaüstü navigasyon*/}
           <nav className="hidden md:flex items-center space-x-20">
+            {/* Navigasyon linkleri - Skills ve Projects */}
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-[18px] text-[#6B7280] dark:text-[#6B7280] hover:text-[#3730A3] dark:hover:text-[#3730A3] transition-colors"
+                className="text-[18px] text-light-text dark:text-dark-text hover:text-primary dark:hover:text-primary transition-colors"
               >
                 {item.label}
               </a>
             ))}
+            {/* İletişim butonu - Sağ taraf */}
             <a
               href="#contact"
-              className="px-4 py-2 text-[#3730A3] dark:text-[#3730A3] border border-[#3730A3] dark:border-[#3730A3] rounded-[6px] dark:bg-white hover:bg-[#3730A3] dark:hover:bg-[#3730A3] hover:text-white dark:hover:text-white transition-colors text-[18px]"
+              className="px-4 py-2 text-primary dark:text-primary border border-primary dark:border-primary rounded-[6px] dark:bg-light-bg hover:bg-primary dark:hover:bg-primary hover:text-light-bg dark:hover:text-light-bg transition-colors text-[18px]"
             >
               {t.nav.hire}
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobil menü butonu - Sağ taraf (sadece mobilde görünür) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            aria-label="Toggle menu"
+            className="md:hidden p-2 rounded-lg hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
           >
+            {/* Menü ikonu - Açık/kapalı durumuna göre değişir */}
             <svg
               className="w-6 h-6"
               fill="none"
@@ -73,22 +79,24 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobil navigasyon menüsü - Alt kısım (sadece mobilde ve açıkken görünür) */}
         {isMenuOpen && (
           <nav className="md:hidden py-4 space-y-4">
+            {/* Mobil navigasyon linkleri */}
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="block text-[18px] text-[#6B7280] dark:text-[#6B7280] hover:text-[#3730A3] dark:hover:text-[#3730A3] transition-colors"
+                className="block text-[18px] text-light-text dark:text-dark-text hover:text-primary dark:hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
+            {/* Mobil iletişim butonu */}
             <a
               href="#contact"
-              className="block px-4 py-2 text-[#3730A3] dark:text-[#3730A3] border border-[#3730A3] dark:border-[#3730A3] rounded-[6px] dark:bg-white hover:bg-[#3730A3] dark:hover:bg-[#3730A3] hover:text-white dark:hover:text-white transition-colors text-center text-[18px]"
+              className="block px-4 py-2 text-primary dark:text-primary border border-primary dark:border-primary rounded-[6px] dark:bg-light-bg hover:bg-primary dark:hover:bg-primary hover:text-light-bg dark:hover:text-light-bg transition-colors text-center text-[18px]"
               onClick={() => setIsMenuOpen(false)}
             >
               {t.nav.hire}
