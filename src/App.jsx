@@ -1,5 +1,5 @@
-import { ThemeProvider } from './context/ThemeContext';
-import { LanguageProvider } from './context/LanguageContext';
+import { ThemeProvider } from './context/ThemeProvider';
+import { LanguageProvider } from './context/LanguageProvider';
 import Header from './components/Header';
 import Switch from './components/Switch';
 import Hero from './components/Hero';

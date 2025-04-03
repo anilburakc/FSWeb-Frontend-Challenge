@@ -31,10 +31,10 @@ export const content = {
       title: 'Profile',
       profile: 'Profile',
       info: {
-        'Birth Date': '24.03.1996',
-        'Location': 'Ankara',
-        'Education': 'Hacettepe Univ. Biology\nBSc, 2016',
-        'Current Role': 'Frontend, UI'
+        'Birth Date': '20.04.1999',
+        'Location City': 'Muğla',
+        'Education Status': 'İzmir Demokrasi Univ. Nutrition & Dietetics\nBSc, 2023',
+        'Preferred Role': 'Frontend, UI, Backend'
       },
       about: 'About Me',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\nMinima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!'
@@ -46,16 +46,15 @@ export const content = {
         description: 'A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.',
         tech: ['React', 'Redux', 'Axios'],
         links: {
-          github: 'https://github.com',
-          live: 'https://example.com'
+          github: 'https://github.com/anilburakc/fsweb-s8-challenge-pizza',
+          live: 'https://fsweb-s8-challenge-pizza-psi.vercel.app/'
         }
       }
     },
     contact: {
       title: 'Let\'s work together on your next product.',
-      email: 'almilasucode@gmail.com',
+      email: 'swdanilburak@gmail.com',
       links: {
-        blog: 'Personal Blog',
         github: 'Github',
         linkedin: 'LinkedIn'
       }
@@ -93,10 +92,10 @@ export const content = {
       title: 'Profil',
       profile: 'Profil',
       info: {
-        'Doğum Tarihi': '24.03.1996',
-        'Konum': 'Ankara',
-        'Eğitim': 'Hacettepe Üniv. Biyoloji\nLisans, 2016',
-        'Mevcut Rol': 'Frontend, UI'
+        'Doğum Tarihi': '20.04.1999',
+        'İkamet Şehri': 'Muğla',
+        'Eğitim Durumu': 'İzmir Demokrasi Üniv. Beslenme ve Diyetetik \nLisans, 2023',
+        'Tercih Ettiği Rol': 'Frontend, UI, Backend'
       },
       about: 'Hakkımda',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\nMinima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!'
@@ -108,16 +107,15 @@ export const content = {
         description: 'A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.',
         tech: ['React', 'Redux', 'Axios'],
         links: {
-          github: 'https://github.com',
-          live: 'https://example.com'
+          github: 'https://github.com/anilburakc/fsweb-s8-challenge-pizza',
+          live: 'https://fsweb-s8-challenge-pizza-psi.vercel.app/'
         }
       }
     },
     contact: {
       title: 'Bir sonraki projeniz için birlikte çalışalım.',
-      email: 'almilasucode@gmail.com',
+      email: 'swdanilburak@gmail.com',
       links: {
-        blog: 'Kişisel Blog',
         github: 'Github',
         linkedin: 'LinkedIn'
       }

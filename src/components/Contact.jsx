@@ -1,4 +1,4 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../data/content';
 
 const Contact = () => {
@@ -20,15 +20,7 @@ const Contact = () => {
           </a>
           <div className="flex gap-8">
             <a
-              href="https://blog.example.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[18px] text-[#0A0A14] dark:text-[#E1E1FF]"
-            >
-              {t.contact.links.blog}
-            </a>
-            <a
-              href="https://github.com"
+              href="https://github.com/anilburakc"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[18px] text-[#00AB6B] dark:text-[#17D18B]"
@@ -36,7 +28,7 @@ const Contact = () => {
               {t.contact.links.github}
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/anilburakcavdir/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[18px] text-[#0077B5] dark:text-[#0BA6F6]"

@@ -1,4 +1,4 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../data/content';
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="flex items-center gap-4 mb-4">
               <div className="h-[1px] w-[64px] bg-[#4338CA] dark:bg-[#B7AAFF]"></div>
               <h2 className="text-[18px] text-[#4338CA] dark:text-[#B7AAFF]">
-                Almila Su
+                Anıl Burak Çavdır
               </h2>
             </div>
             <div className="mb-8">
@@ -32,7 +32,7 @@ const Hero = () => {
                 {t.nav.hire}
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/anilburakc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white dark:bg-[#383838] text-[#3730A3] dark:text-[#E1E1FF] border border-[#3730A3] dark:border-[#E1E1FF] rounded-[6px] hover:bg-[#3730A3] dark:hover:bg-[#E1E1FF] hover:text-white dark:hover:text-[#383838] transition-colors"
@@ -40,7 +40,7 @@ const Hero = () => {
                 Github
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/anilburakcavdir/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white dark:bg-[#383838] text-[#3730A3] dark:text-[#E1E1FF] border border-[#3730A3] dark:border-[#E1E1FF] rounded-[6px] hover:bg-[#3730A3] dark:hover:bg-[#E1E1FF] hover:text-white dark:hover:text-[#383838] transition-colors"

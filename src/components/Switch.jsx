@@ -1,5 +1,5 @@
-import { useTheme } from '../context/ThemeContext';
-import { useLanguage } from '../context/LanguageContext';
+import { useTheme } from '../hooks/useTheme';
+import { useLanguage } from '../hooks/useLanguage';
 import { content } from '../data/content';
 
 const Switch = () => {
@@ -47,7 +47,7 @@ const Switch = () => {
         onClick={toggleLanguage}
         className="w-[120px] text-[15px] font-medium text-gray-600 dark:text-gray-400 text-center whitespace-nowrap"
       >
-        {t.nav.language}
+        {language === 'en' ?<><span className='text-[#4731D3]'>TÜRKÇE</span><span>'YE GEÇ</span></> : <><span>SWITCH TO </span><span className='text-[#4731D3]'>ENGLISH</span></>}
       </button>
     </div>
   );
